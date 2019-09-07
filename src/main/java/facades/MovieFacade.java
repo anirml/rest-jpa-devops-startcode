@@ -40,12 +40,22 @@ public class MovieFacade {
     public long getMovieCount(){
         EntityManager em = emf.createEntityManager();
         try{
-            long MovieCount = (long)em.createQuery("SELECT COUNT(r) FROM Movie r").getSingleResult();
+            long MovieCount = (long)em.createQuery("SELECT COUNT(m) FROM Movie m").getSingleResult();
             return MovieCount;
         }finally{  
             em.close();
         }
         
+    }
+    
+        public List<Movie> getAllMovies(){
+        EntityManager em = getEntityManager();
+        try {
+            List<Movie> movies = em.createQuery("SELECT m from Movie m").getResultList();
+            return movies;
+        } finally {
+            em.close();
+        }        
     }
 
 }

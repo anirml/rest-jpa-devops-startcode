@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import entities.Movie;
 import utils.EMF_Creator;
 import facades.MovieFacade;
+import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -42,6 +43,14 @@ public class MovieResource {
         return "{\"count\":"+count+"}";  //Done manually so no need for a DTO
     }
 
+    @Path("all")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String getAllBankCustomers() {
+        List<Movie> movies = FACADE.getAllMovies();
+        return GSON.toJson(movies);
+    }
+    
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public void create(Movie entity) {
