@@ -64,7 +64,7 @@ public class MovieResource {
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
-    public void update(Movie entity, @PathParam("id") int id) {
+    public void update(Movie entity, @PathParam("id") Long id) {
         throw new UnsupportedOperationException();
     }
 }
