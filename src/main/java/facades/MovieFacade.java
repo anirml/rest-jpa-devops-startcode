@@ -48,7 +48,7 @@ public class MovieFacade {
         
     }
     
-        public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies(){
         EntityManager em = getEntityManager();
         try {
             List<Movie> movies = em.createQuery("SELECT m from Movie m").getResultList();
@@ -56,6 +56,16 @@ public class MovieFacade {
         } finally {
             em.close();
         }        
+    }
+        
+    public Movie findMovie(Long id){
+        EntityManager em = emf.createEntityManager();
+        try{
+            Movie movie = em.find(Movie.class,id);
+            return movie;
+        }finally {
+            em.close();
+        }
     }
 
 }

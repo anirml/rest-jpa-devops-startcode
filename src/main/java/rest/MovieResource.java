@@ -61,10 +61,18 @@ public class MovieResource {
         throw new UnsupportedOperationException();
     }
     
-    @PUT
+    //@PUT
+    //@Path("/{id}")
+    //@Consumes({MediaType.APPLICATION_JSON})
+    //public void update(Movie entity, @PathParam("id") Long id) {
+    //    throw new UnsupportedOperationException();
+    //}
+    
     @Path("/{id}")
-    @Consumes({MediaType.APPLICATION_JSON})
-    public void update(Movie entity, @PathParam("id") Long id) {
-        throw new UnsupportedOperationException();
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public String MovieId(@PathParam("id") Long id) {
+        return GSON.toJson(FACADE.findMovie(id));
     }
+    
 }
