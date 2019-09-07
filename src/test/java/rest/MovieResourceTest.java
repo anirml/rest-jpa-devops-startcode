@@ -13,6 +13,8 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.util.HttpStatus;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
+import org.hamcrest.Matchers;
+import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -86,7 +88,6 @@ public class MovieResourceTest {
         given().when().get("/movie").then().statusCode(200);
     }
    
-    //This test assumes the database contains two rows
     @Test
     public void testDummyMsg() throws Exception {
         given()
@@ -94,7 +95,7 @@ public class MovieResourceTest {
         .get("/movie/").then()
         .assertThat()
         .statusCode(HttpStatus.OK_200.getStatusCode())
-        .body("msg", equalTo("Hello World"));   
+        .body("msg", equalTo("Hello World. Demo metode!"));   
     }
     
     @Test
@@ -105,5 +106,16 @@ public class MovieResourceTest {
         .assertThat()
         .statusCode(HttpStatus.OK_200.getStatusCode())
         .body("count", equalTo(2));   
+    }
+    
+    //http://lotzofweb.com/rest-jpa-devops-starter/api/movie/all
+        @Test
+    public void testDirectorName() throws Exception {
+        given()
+        .contentType("application/json")
+        .get("/movie/all").then()
+        .assertThat()
+        .statusCode(HttpStatus.OK_200.getStatusCode())
+        .body("MovDirector",  Matchers.hasItems("Christopher Nolan"));   
     }
 }

@@ -32,8 +32,10 @@ public class MovieResource {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public String demo() {
-        return "{\"msg\":\"Hello World\"}";
+        return "{\"msg\":\"Hello World. Demo metode!\"}";
     }
+    
+    //http://lotzofweb.com/rest-jpa-devops-starter/api/movie/count
     @Path("count")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
