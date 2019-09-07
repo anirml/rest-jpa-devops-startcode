@@ -1,10 +1,365 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>travis virker</h1>
-    </body>
+<head>
+</head>
+	<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Signika:400,600'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1000px)" href="css/desktop.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+		<link rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 499px), only screen and (max-device-width: 499px)" href="css/mobile.css"/>
+<header class="Mainheader">
+<img src="https://cdn.discordapp.com/attachments/375472327481098273/619319426684157971/path_of_diablo.JPG" alt="Green energy header of grass and lightbulb" class="header-image"/>
+</header>
+<style>
+p.small {
+  line-height: 0.2;
+  color:white;
+}
+p.pot {
+  color:orangered;
+}
+p.ess {
+  color:aquamarine;
+}
+p.runes {
+  color:silver;
+}
+span.aniA {
+  color:lime;
+}
+span.filtF {
+  color:deepskyblue;
+}
+h2.h2 {
+  line-height: 0.2;
+  text-decoration: underline;
+  color:lemonchiffon;
+}
+h3.h3 {
+  line-height: 0.4;
+  text-decoration: underline;
+  color:red;
+}
+h4.h4 {
+  line-height: 0.2;
+  color:white;
+}
+
+
+body{
+	max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    clear: both;
+    height: 100%;
+    background-image: url("https://cdn.discordapp.com/attachments/375472327481098273/619329792533069824/8gdN801b.jpg");
+    background-color: #DCDCDC;
+    padding-top: 30px ; 
+    margin: 0 auto;
+    padding-top: 30px ; 
+    font-family: 'PT Sans', sans-serif;
+    font-size: 100%;
+    text-align: left;
+    line-height: 1.5;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: #0AF73A 0px 0px 0px;}
+
+.header {
+	width: 100%;
+}
+	
+.MainHeader {
+    background-color: #71B315;
+	background: url("http://critterbabies.com/wp-content/gallery/kittens/happy-kitten-kittens-5890512-1600-1200.jpg");
+    /* clearfix */
+    overflow: auto;
+	margin-top: 2% 0;}
+
+.MainHeader nav {
+	background-color: #2f3036;
+	height: 60px;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;}
+
+.content {
+	margin-bottom: 2%}
+
+.MainHeader {margin-bottom: 2%;}
+
+.MainHeader img {
+    width: 20%; 
+    height: auto;}
+
+.MainHeader {
+    padding-top: 20px;
+	padding-bottom: 10px;}
+	
+.headertext {
+    display: inline;}
+
+.logo {
+    display: inline;
+    vertical-align:middle}
+
+#menu .MainHeader nav a:hover, .MainHeader nav a:active
+#menu .MainHeader nav .active a:link, .Mainheader nav .active a:visited {
+    background-color: ;
+	text-shadow: none;}
+
+.MainHeader nav ul li a {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;}
+
+
+</style>
+<body>
+<h2 class="h2">Anirml's FilterBuilder</h2>
+<h4 class="h4">Customize you Item-filter file for Path of Diablo!</h4>
+
+<!--<img src="https://cdn.discordapp.com/attachments/375472327481098273/619283654698467340/ber_anirml.png" alt="W3Schools.com" style="">-->
+<!--<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;">-->
+
+<h4 class="h4">Anirml Style (<span class="aniA">A</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Filtergale Style (<span class="filtF">F</span>)</h4>
+
+<button onclick="runes()">+ Runes(<span class="aniA">A</span>)</button>
+<!--<button onclick="frunes()">- Runes</button>-->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="runesF()">+ Runes(<span class="filtF">F</span>)</button>
+<!--<button onclick="frunes()">- Runes</button>-->
+<br><br>
+
+<button onclick="potions()">+ Potions(<span class="aniA">A</span>)</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="potionsF()">+ Potions(<span class="filtF">F</span>)</button>
+
+<br><br>
+
+<button onclick="ess()">+ Essences/Resp-Token(<span class="aniA">A</span>)</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="essF()">+ Essences/Resp-Token(<span class="filtF">F</span>)</button>
+<h3 class="h3">Selected:</h3>
+
+
+<p class="small"><span id="Spotions1"></span></p>
+<p class="small"><span id="Sess1"></span></p>
+<p class="small"><span id="Srunes1"></span><span id=Srunes1a></span></p>
+
+
+<br><br><br><br><br>
+
+<p class="pot"><span id="potions1"></span></p>
+<p class="ess"><span id="ess1"></span></p>
+<p class="runes"><span id="runes1"></span></p>
+
+<script>
+
+var potions_text = "////Health & Mana Potions(Anirml)"+
+"<br>ItemDisplay[rvl]: %PURPLE%R %WHITE%70%"+
+"<br>ItemDisplay[rvs]: %PURPLE%r %WHITE%35%"+
+"<br>ItemDisplay[hp5]: %RED%!%WHITE%H+"+
+"<br>ItemDisplay[mp4]: %BLUE%!%WHITE%M"+
+"<br>ItemDisplay[mp5]: %BLUE%!%WHITE%M+"+
+"<br>ItemDisplay[hp1 CLVL<15]: %RED%!%WHITE%Minor Heal"+
+"<br>ItemDisplay[hp2 CLVL<18]: %RED%!%WHITE%Light Heal"+
+"<br>ItemDisplay[hp3 CLVL<24]: %RED%!%WHITE%Healing"+
+"<br>ItemDisplay[hp4 CLVL<60]: %RED%!%WHITE%H"+
+"<br>ItemDisplay[hp1 CLVL>14]:"+
+"<br>ItemDisplay[hp2 CLVL>17]:"+
+"<br>ItemDisplay[hp3 CLVL>23]:"+
+"<br>ItemDisplay[hp4 CLVL>59]:"+
+"<br>ItemDisplay[mp1 CLVL<15]: %BLUE%!%WHITE%Minor Mana"+
+"<br>ItemDisplay[mp2 CLVL<20]: %BLUE%!%WHITE%Light Mana"+
+"<br>ItemDisplay[mp3 CLVL<26]: %BLUE%!%WHITE%Mana"+
+"<br>ItemDisplay[mp1 CLVL>14]:"+
+"<br>ItemDisplay[mp2 CLVL>19]:"+
+"<br>ItemDisplay[mp3 CLVL>25]:"+
+"<br>//End potions";
+
+var fpotions_text = "////Health & Mana Potions(Filtergale)"+
+"<br>ItemDisplay[rvl]: %PURPLE%R %WHITE%70%"+
+"<br>ItemDisplay[hp5]: %RED%!%WHITE%H+"+
+"<br>ItemDisplay[mp5]: %BLUE%!%WHITE%M+"+
+"<br>ItemDisplay[rvs]: %PURPLE%r %WHITE%35%"+
+"<br>ItemDisplay[hp1 CLVL<15]: %RED%!%WHITE%Minor Heal"+
+"<br>ItemDisplay[hp2 CLVL<18]: %RED%!%WHITE%Light Heal"+
+"<br>ItemDisplay[hp3 CLVL<24]: %RED%!%WHITE%Healing"+
+"<br>ItemDisplay[hp4 CLVL<60]: %RED%!%WHITE%H"+
+"<br>ItemDisplay[hp1 CLVL>14]:"+
+"<br>ItemDisplay[hp2 CLVL>17]:"+
+"<br>ItemDisplay[hp3 CLVL>23]:"+
+"<br>ItemDisplay[hp4 CLVL>59]:"+
+"<br>ItemDisplay[mp1 CLVL<15]: %BLUE%!%WHITE%Minor Mana"+
+"<br>ItemDisplay[mp2 CLVL<20]: %BLUE%!%WHITE%Light Mana"+
+"<br>ItemDisplay[mp3 CLVL<26]: %BLUE%!%WHITE%Mana"+
+"<br>ItemDisplay[mp4 CLVL<60]: %BLUE%!%WHITE%M"+
+"<br>ItemDisplay[mp1 CLVL>14]:"+
+"<br>ItemDisplay[mp2 CLVL>19]:"+
+"<br>ItemDisplay[mp3 CLVL>25]:"+
+"<br>ItemDisplay[mp4 CLVL>59]:"+
+"<br>//End potions";
+
+var ess_text = "////Essences+Respec Token(Anirml)"+
+"<br>ItemDisplay[tes]: %GOLD%Suffering [Andariel]"+
+"<br>ItemDisplay[ceh]: %GOLD%Hatred [Mephisto]"+
+"<br>ItemDisplay[bet]: %GOLD%Terror [Diablo]"+
+"<br>ItemDisplay[fed]: %GOLD%Destruction [Baal]"+
+"<br>ItemDisplay[toa]: %GOLD%Token of Absolution"+
+"<br>//End essences + respec token";
+
+
+
+var ess_textF = "////Essences+Respec Token(Filtergale)"+
+"<br>ItemDisplay[tes]: %GOLD%Suffering [Andariel]"+
+"<br>ItemDisplay[ceh]: %GOLD%Hatred [Mephisto]"+
+"<br>ItemDisplay[bet]: %GOLD%Terror [Diablo]"+
+"<br>ItemDisplay[fed]: %RED%Destruction [Baal]"+
+"<br>ItemDisplay[toa]: %PURPLE%Token of Absolution"+
+"<br>//End essences + respec token";
+
+
+
+var frunes_text = "";
+var runes_text = "////RUNES(Anirml)"+
+"<br>//1-16"+ 
+"<br>ItemDisplay[r01]: %TAN%%RUNENAME% [%RUNENUM%]"+ 
+"<br>ItemDisplay[r02]: %TAN%%RUNENAME% [%RUNENUM%]"+ 
+"<br>ItemDisplay[r03]: %TAN%%RUNENAME% [%RUNENUM%]"+ 
+"<br>ItemDisplay[r04]: %TAN%Nef [%RUNENUM%] [B Gloves]"+
+"<br>ItemDisplay[r05]: %TAN%%RUNENAME% [%RUNENUM%]"+
+"<br>ItemDisplay[r06]: %TAN%Ith [%RUNENUM%] [C Belt]"+
+"<br>ItemDisplay[r07]: %TAN%Tal [%RUNENUM%] [B Belt]"+
+"<br>ItemDisplay[r08]: %TAN%Ral [%RUNENUM%] [C Amulet]"+
+"<br>ItemDisplay[r09]: %TAN%Ort [%RUNENUM%] [HP Gloves]"+
+"<br>ItemDisplay[r10]: %TAN%Thul [%RUNENUM%] [S Amulet]"+
+"<br>ItemDisplay[r11]: %TAN%Amn [%RUNENUM%] [C Ring]"+
+"<br>ItemDisplay[r12]: %TAN%Sol [%RUNENUM%] [B Ring]"+
+"<br>ItemDisplay[r13]: %TAN%%RUNENAME% [%RUNENUM%]"+
+"<br>ItemDisplay[r14]: %TAN%%RUNENAME% [%RUNENUM%]"+ 
+"<br>ItemDisplay[r15]: %ORANGE%   %RUNENAME% [%RUNENUM%]   %ORANGE%"+
+"<br>ItemDisplay[r16]: %TAN%%RUNENAME% [%RUNENUM%]"+ 
+"<br>//17-23"+
+"<br>ItemDisplay[r17]: %ORANGE%   %RUNENAME% [%RUNENUM%]   %ORANGE%"+
+"<br>ItemDisplay[r18]: %ORANGE%   %RUNENAME% [%RUNENUM%]   %ORANGE%"+
+"<br>ItemDisplay[r19]: %ORANGE%   %RUNENAME% [%RUNENUM%]   %ORANGE%"+
+"<br>ItemDisplay[r20]: %PURPLE%  OO %RED%%RUNENAME%%PURPLE% OO [%RUNENUM%]  %RED%"+
+"<br>ItemDisplay[r21]: %PURPLE%  OOO %RED%%RUNENAME%%PURPLE% OOO [%RUNENUM%]  %RED%"+
+"<br>ItemDisplay[r22]: %PURPLE%  OOO %RED%%RUNENAME%%PURPLE% OOO [%RUNENUM%]  %RED%"+
+"<br>ItemDisplay[r23]: %PURPLE%  OOO %RED%%RUNENAME%%PURPLE% OOO [%RUNENUM%]  %RED%"+
+"<br>//24-33"+
+"<br>ItemDisplay[r24]: %PURPLE% OOOO %RED%%RUNENAME%%PURPLE% OOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r25]: %PURPLE% OOOO %RED%%RUNENAME%%PURPLE% OOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r26]: %PURPLE% OOOOO %RED%%RUNENAME%%PURPLE% OOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r27]: %PURPLE% OOOOO %RED%%RUNENAME%%PURPLE% OOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r28]: %PURPLE% OOOOOO %RED%%RUNENAME%%PURPLE% OOOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r29]: %PURPLE% OOOOOO %RED%%RUNENAME%%PURPLE% OOOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r30]: %PURPLE% OOOOOO %RED%%RUNENAME%%PURPLE% OOOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r31]: %PURPLE% OOOOOO %RED%%RUNENAME%%PURPLE% OOOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r32]: %PURPLE% OOOOO %RED%%RUNENAME%%PURPLE% OOOOO [%RUNENUM%] %RED%"+
+"<br>ItemDisplay[r33]: %PURPLE% OOOOO %RED%%RUNENAME%%PURPLE% OOOOO [%RUNENUM%] %RED%"+
+"<br>//End runes";
+
+var runes_textF = "////RUNES(Filtergale)"+
+"<br>//1-16"+
+"<br>ItemDisplay[r01 CLVL>86]: %GRAY%%RUNENAME% 1"+
+"<br>ItemDisplay[r02 CLVL>86]: %GRAY%%RUNENAME% 2"+
+"<br>ItemDisplay[r03 CLVL>86]: %GRAY%%RUNENAME% 3"+
+"<br>ItemDisplay[r01]: %TAN%%RUNENAME% 1"+
+"<br>ItemDisplay[r02]: %TAN%%RUNENAME% 2"+
+"<br>ItemDisplay[r03]: %TAN%%RUNENAME% 3"+
+"<br>ItemDisplay[r02]: %GRAY%%RUNENAME% 2"+
+"<br>ItemDisplay[r03]: %GRAY%%RUNENAME% 3"+
+"<br>ItemDisplay[r04]: %TAN%Nef 4"+
+"<br>ItemDisplay[r05 CLVL>86]: %GRAY%%RUNENAME% 5"+
+"<br>ItemDisplay[r05]: %TAN%%RUNENAME% 5"+
+"<br>ItemDisplay[r06]: %ORANGE%Ith 6 [C Belt]"+
+"<br>ItemDisplay[r07]: %ORANGE%Tal 7 [B Belt]"+
+"<br>ItemDisplay[r08]: %ORANGE%Ral 8 [C Amulet]"+
+"<br>ItemDisplay[r09]: %TAN%Ort 9"+
+"<br>ItemDisplay[r10]: %ORANGE%Thul 10 [C Boots]"+
+"<br>ItemDisplay[r11]: %ORANGE%Amn 11 [B Amulet]"+
+"<br>ItemDisplay[r12]: %ORANGE%Sol 12 [B Ring]"+
+"<br>ItemDisplay[r13 CLVL>86]: %GRAY%%RUNENAME% 13"+ 
+"<br>ItemDisplay[r14 CLVL>86]: %GRAY%%RUNENAME% 14"+ 
+"<br>ItemDisplay[r13]: %TAN%%RUNENAME% 13"+ 
+"<br>ItemDisplay[r14]: %TAN%%RUNENAME% 14"+ 
+"<br>ItemDisplay[r15]: %TAN%%RUNENAME% 15"+
+"<br>ItemDisplay[r16]: %TAN%io 16"+
+"<br>//17-23"+
+"<br>ItemDisplay[r17]: %TAN%%RUNENAME% 17"+
+"<br>ItemDisplay[r18]: %TAN%%RUNENAME% 18"+
+"<br>ItemDisplay[r19]: %TAN%%RUNENAME% 19"+
+"<br>ItemDisplay[r20]: %RED%¤ %PURPLE%LEM 20%RED% ¤"+
+"<br>ItemDisplay[r21]: %RED%¤ %PURPLE%PUL 21%RED% ¤"+
+"<br>ItemDisplay[r22]: %RED%¤¤ %PURPLE%UM 22%RED% ¤¤"+
+"<br>ItemDisplay[r23]: %RED%¤¤ %PURPLE%MAL 23%RED% ¤¤"+
+"<br>//24-33"+
+"<br>ItemDisplay[r24]: %RED%¤¤¤ %PURPLE%IST 24%RED% ¤¤¤"+
+"<br>ItemDisplay[r25]: %RED%¤¤¤¤ %PURPLE%GUL 25%RED% ¤¤¤¤"+
+"<br>ItemDisplay[r26]: %RED%¤¤¤¤¤¤¤¤¤¤ %PURPLE%VEX 26%RED% ¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r27]: %RED%¤¤¤¤¤¤¤¤¤¤ %PURPLE%OHM 27%RED% ¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r28]: %RED%¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ %PURPLE%LO 28%RED% ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r29]: %RED%¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ %PURPLE%SUR 29%RED% ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r30]: %RED%¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ %PURPLE%BER 30%RED% ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r31]: %RED%¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ %PURPLE%JAH 31%RED% ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r32]: %RED%¤¤¤¤¤¤¤¤¤¤ %PURPLE%CHAM 32%RED% ¤¤¤¤¤¤¤¤¤¤"+
+"<br>ItemDisplay[r33]: %RED%¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ %PURPLE%ZOD 33%RED% ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤"+
+"<br>//End runes";
+
+
+
+//var RunesURLAnirml = "src=https://cdn.discordapp.com/attachments/375472327481098273/619283654698467340/ber_anirml.png""
+
+function ess() {
+  document.getElementById("ess1").innerHTML = ess_text;
+  document.getElementById("Sess1").innerHTML = "<p><strong>Essences/Respec-Token(<span class="+"aniA"+">A</span>)</strong></p>";
+}
+
+function essF() {
+  document.getElementById("ess1").innerHTML = ess_textF;
+  document.getElementById("Sess1").innerHTML = "<p><strong>Essences/Respec-Token(<span class="+"filtF"+">F</span>)</strong></p>";
+}
+
+function potions() {
+  document.getElementById("potions1").innerHTML = potions_text;
+  document.getElementById("Spotions1").innerHTML = "<p><strong>Potions(<span class="+"aniA"+">A</span>)</strong></p>";
+}
+
+function potionsF() {
+  document.getElementById("potions1").innerHTML = fpotions_text;
+  document.getElementById("Spotions1").innerHTML = "<p><strong>Potions(<span class="+"filtF"+">F</span>)</strong></p>";
+}
+//This function makes empty string
+function frunes() {
+  document.getElementById("runes1").innerHTML = frunes_text;
+}
+
+function runes() {
+  document.getElementById("runes1").innerHTML = runes_text;
+  document.getElementById("Srunes1").innerHTML = "<strong>Runes(<span class="+"aniA"+">A</span>)</strong>";
+  document.getElementById("Srunes1a").innerHTML = " <img " + "src="
+  + '"https://cdn.discordapp.com/attachments/375472327481098273/619283654698467340/ber_anirml.png"'
+  + "alt=" + '"W3Schools.com"'+ "align=" + '"bottom"' + 'style="display:inline;">';
+}
+
+function runesF() {
+  document.getElementById("runes1").innerHTML = runes_textF;
+  document.getElementById("Srunes1").innerHTML = "<strong>Runes(<span class="+"filtF"+">F</span>)</strong>";
+  document.getElementById("Srunes1a").innerHTML = " <img " + "src="
+  + '"https://cdn.discordapp.com/attachments/375472327481098273/619313739132305418/ber_filtergale.png"'
+  + "alt=" + '"W3Schools.com"'+ "align=" + '"bottom"' + 'style="display:inline;">';
+}
+</script>
+
+</body>
 </html>
