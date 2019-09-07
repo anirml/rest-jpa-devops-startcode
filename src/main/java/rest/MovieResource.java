@@ -17,7 +17,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 //Todo Remove or change relevant parts before ACTUAL use
-@Path("xxx")
+@Path("movie")
 public class MovieResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory(
@@ -42,7 +42,9 @@ public class MovieResource {
         //System.out.println("--------------->"+count);
         return "{\"count\":"+count+"}";  //Done manually so no need for a DTO
     }
-
+    
+   
+//http://lotzofweb.com/rest-jpa-devops-starter/api/movie/all
     @Path("all")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
