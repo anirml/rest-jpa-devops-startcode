@@ -2,7 +2,7 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import entities.RenameMe;
+import entities.Movie;
 import utils.EMF_Creator;
 import facades.FacadeExample;
 import javax.persistence.EntityManagerFactory;
@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 
 //Todo Remove or change relevant parts before ACTUAL use
 @Path("xxx")
-public class RenameMeResource {
+public class MovieResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory(
                 "pu",
