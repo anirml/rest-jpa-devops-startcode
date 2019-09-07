@@ -16,6 +16,39 @@ public class Movie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private int MovYear;
+    private String MovTitle;
+    private String MovDirector;
+
+    public Movie(int MovYear, String MovTitle, String MovDirector) {
+        this.MovYear = MovYear;
+        this.MovTitle = MovTitle;
+        this.MovDirector = MovDirector;
+    }
+
+    public int getMovYear() {
+        return MovYear;
+    }
+
+    public void setMovYear(int MovYear) {
+        this.MovYear = MovYear;
+    }
+
+    public String getMovTitle() {
+        return MovTitle;
+    }
+
+    public void setMovTitle(String MovTitle) {
+        this.MovTitle = MovTitle;
+    }
+
+    public String getMovDirector() {
+        return MovDirector;
+    }
+
+    public void setMovDirector(String MovDirector) {
+        this.MovDirector = MovDirector;
+    }
     
     public Movie() {
     }
@@ -27,33 +60,6 @@ public class Movie implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    // TODO, delete this class, or rename to an Entity class that makes sense for what you are about to do
-    // Delete EVERYTHING below if you decide to use this class, it's dummy data used for the initial demo
-    private String dummyStr1;
-    private String dummyStr2;
-
-    public Movie(String dummyStr1, String dummyStr2) {
-        this.dummyStr1 = dummyStr1;
-        this.dummyStr2 = dummyStr2;
-    }
-
-    public String getDummyStr1() {
-        return dummyStr1;
-    }
-
-    public void setDummyStr1(String dummyStr1) {
-        this.dummyStr1 = dummyStr1;
-    }
-
-    public String getDummyStr2() {
-        return dummyStr2;
-    }
-
-    public void setDummyStr2(String dummyStr2) {
-        this.dummyStr2 = dummyStr2;
-    }
-    
     
     
 

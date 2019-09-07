@@ -71,8 +71,8 @@ public class MovieResourceTest {
         try {
             em.getTransaction().begin();
             em.createNamedQuery("Movie.deleteAllRows").executeUpdate();
-            em.persist(new Movie("Some txt","More text"));
-            em.persist(new Movie("aaa","bbb"));
+            em.persist(new Movie(1999,"The Matrix","Lana og Lilly Wachowski"));
+            em.persist(new Movie(2014,"Interstellar","Christopher Nolan"));
            
             em.getTransaction().commit();
         } finally {
