@@ -112,7 +112,8 @@ vi implementerede en calculater i en html side.
 
 ## http://lotzofweb.com/rest-jpa-devops-starter/
 
-
+## Link til Travis build log:
+### https://travis-ci.org/anirml/rest-jpa-devops-startcode
 
 
 
